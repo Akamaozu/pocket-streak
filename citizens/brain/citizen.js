@@ -13,7 +13,7 @@ app.step( 'handle http server lifecycle hooks', function(){
   var citizen = app.get( 'citizen' );
 
   citizen.noticeboard.once( 'http-shutdown', 'exit', exit_app( 'http has shut down' ) );
-  citizen.noticeboard.once( 'http-crashed-excessively', 'exit', exit_app( 'http crashed excessively' ));
+  citizen.noticeboard.once( 'http-excessive-crash', 'exit', exit_app( 'http crashed excessively' ));
 
   app.next();
 
